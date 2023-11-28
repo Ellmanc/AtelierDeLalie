@@ -25,6 +25,7 @@ class New(models.Model):
     title = models.fields.CharField(max_length=100)
     content = models.fields.CharField(max_length=1500)
     field_name = models.ImageField(upload_to='')
+    backImage = models.ImageField(upload_to='')
 
 
     def __str__(self):

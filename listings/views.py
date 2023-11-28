@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from django.db import models
 from listings.models import Band
 from listings.models import New
 
@@ -25,3 +25,9 @@ def contact(request):
 def listing(request):
     news = New.objects.all()
     return render(request, 'listings/news.html', {'news': news})
+
+
+def home(request):
+    logo = models.ImageField(name='Logo.jpeg')
+    new = New.objects.all()[0]
+    return render(request, 'listings/home.html', {'logo': logo, 'new': new})

@@ -1,5 +1,5 @@
 * {
-    background: #F8F2DD
+    background: #F8F2DD;
 }
 
 h1, h2 {
@@ -8,14 +8,76 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 70px;
 }
 
 h2 {
     font-size: 30px;
+    margin-right: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 p, ul, li, td {
     font-family: Aubrey;
     text-align: justify;
+}
+
+a {
+    height: 50px;
+}
+
+.TitleHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.HeadBand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Separator {
+    background: #19426B;
+    margin: 0;
+    height: 10px;
+}
+
+.News {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.NewsText {
+    margin: 0;
+    margin-left: 150px;
+    background: rgba(248,242,221,70%);
+    border-radius: 30px;
+}
+
+.News img {
+    width: 250px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.News h2 {
+    height: 50px;
+    background: None;
+    margin: 20px;
+}
+
+.News p {
+    margin: 50px;
+    background: None;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
 }

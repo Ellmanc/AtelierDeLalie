@@ -1,0 +1,12 @@
+{% extends 'listings/headband.html' %}
+{% block content %}
+
+<div class="News" style="background-image: url({{ new.backImage.url }})">
+    <img src="{{ new.field_name.url }}">
+    <div class="NewsText">
+        <h2>{{ new.title }}</h2>
+        <p>{{ new.content }}</p>
+    </div>
+</div>
+
+{% endblock %}
