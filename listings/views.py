@@ -1,5 +1,6 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
+
 from listings.models import Band
 from listings.models import New
 
@@ -18,9 +19,9 @@ def about(request):
 
 def contact(request):
     bands = Band.objects.all()
-    return render(request, 'listings/hello.html',{'bands': bands})
+    return render(request, 'listings/hello.html', {'bands': bands})
 
 
 def listing(request):
     news = New.objects.all()
-    return render(request, 'listings/news.html',{'news': news})
+    return render(request, 'listings/news.html', {'news': news})
