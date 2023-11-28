@@ -1,0 +1,21 @@
+* {
+    background: #F8F2DD
+}
+
+h1, h2 {
+    font-family: 'Lavishly Yours';
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p, ul, li, td {
+    font-family: Aubrey;
+    text-align: justify;
+}
