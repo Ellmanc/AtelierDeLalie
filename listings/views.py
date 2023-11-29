@@ -29,5 +29,5 @@ def listing(request):
 
 def home(request):
     logo = models.ImageField(name='Logo.jpeg')
-    new = New.objects.all()[0]
-    return render(request, 'listings/home.html', {'logo': logo, 'new': new})
+    news = New.objects.all()
+    return render(request, 'listings/home.html', {'logo': logo, 'news': news})

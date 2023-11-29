@@ -1,12 +1,36 @@
 {% extends 'listings/header.html' %}
 {% block headband %}
-{% load static %}
-<div class="HeadBand">
-    <a href=""><h2>Figurine Plâtre</h2></a>
-    <a href=""><h2>Impression 3D</h2></a>
-    <a href=""><h2>Découpe Laser</h2></a>
-    <a href=""><h2>Bougie / Bougeoir</h2></a>
-    <a href=""><h2>contacts / FAQ</h2></a>
-</div>
-<div class="Separator"></div>
+    {% load static %}
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerLalie"
+                    aria-controls="navbarTogglerLalie" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerLalie">
+                <ul class="navbar-nav me-auto" >
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Figurine Plâtre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Impression 3D</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Découpe Laser</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Bougie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Contacts</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="Separator"></div>
 {% endblock %}
