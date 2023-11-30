@@ -30,10 +30,6 @@ h1 {
     font-size: 100px;
 }
 
-.carousel-control-prev, .carousel-control-next {
-    filter: invert(100%);
-}
-
 .carousel-control-next-icon, .carousel-control-prev-icon {
     background-color: transparent;
 }
@@ -81,14 +77,13 @@ a {
     border-radius: 30px;
 }
 
-.News img {
-    width: 250px;
-    margin-top: 150px;
-    margin-bottom: 150px;
+.img-fluid{
+    width: 50%;
+    max-width: 500px;
+    margin: 5%;
 }
 
 .News h2 {
-    height: 50px;
     background: None;
     margin: 20px;
 }

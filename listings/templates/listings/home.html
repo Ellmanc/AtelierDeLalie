@@ -1,7 +1,7 @@
 {% extends 'listings/headband.html' %}
 {#{% load bootstrap5 %}#}
 {% block content %}
-    <div id="NewsCarousel" class="carousel slide" data-ride="carousel">
+    <div id="NewsCarousel" class="carousel slide carousel-dark" data-ride="carousel">
         <div class="carousel-indicators" style="background: None">
             {% for new in news %}
                 {% if forloop.first %}
@@ -19,7 +19,7 @@
             {% for new in news %}
                 <div class="carousel-item{% if forloop.counter == 1 %} active{% endif %}">
                     <div class="News" style="background-image: url({{ new.backImage.url }})">
-                        <img src="{{ new.field_name.url }}">
+                        <img src="{{ new.field_name.url }}" alt="Responsive image" class="img-fluid img-thumbnail">
                         <div class="NewsText">
                             <h2>{{ new.title }}</h2>
                             <p>{{ new.content }}</p>
