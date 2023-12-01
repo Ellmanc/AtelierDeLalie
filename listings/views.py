@@ -19,12 +19,12 @@ def about(request):
 
 def contact(request):
     bands = Band.objects.all()
-    return render(request, 'listings/hello.html', {'bands': bands})
+    return render(request, 'listings/listings.html', {'bands': bands})
 
 
 def listing(request):
-    news = New.objects.all()
-    return render(request, 'listings/news.html', {'news': news})
+    bands = Band.objects.all()
+    return render(request, 'listings/listings.html', {'bands': bands})
 
 
 def home(request):
