@@ -21,6 +21,12 @@ class Band(models.Model):
         return f'{self.name}'
 
 
+class Article(models.Model):
+    name = models.fields.CharField(max_length=100)
+    description = models.fields.CharField(max_length=1500)
+    stock = models.fields.IntegerField()
+    price = models.fields.DecimalField(decimal_places=2,max_digits=5)
+
 class New(models.Model):
     title = models.fields.CharField(max_length=100)
     content = models.fields.CharField(max_length=1500)
