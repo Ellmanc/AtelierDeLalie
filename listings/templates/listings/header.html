@@ -1,10 +1,11 @@
-{% extends 'listings/base.html' %}
+{% extends 'listings/footer.html' %}
 {% block header %}
 {% load static %}
 <div class="TitleHeader">
-<img class= 'logo' src="{% static 'images/Logo.jpeg' %}">
-<h1>Les folies de Laia</h1>
-<img class= 'logo' src="{% static 'images/Logo.jpeg' %}">
+<img class= 'chibi-header' src="{% static 'images/Chibi.png' %}">
+{#<img class= 'logo' src="{% static 'images/LogoLaiaFond.jpeg' %}">#}
+<h1>Les Folies de Laia</h1>
+<img class= 'logo' src="{% static 'images/LogoLaiaFond.jpeg' %}">
 <p> {{ logo.url }} </p>
 </div>
 {% endblock %}
