@@ -29,5 +29,9 @@ def listing(request):
 
 def home(request):
     logo = models.ImageField(name='Logo.jpeg')
-    news = New.objects.all()
-    return render(request, 'listings/home.html', {'logo': logo, 'news': news})
+    news = New.objects.first()
+    return render(request,'listings/comingSoon.html', {'logo': logo, 'new': news})# 'listings/home.html', {'logo': logo, 'news': news})
+
+def description(request):
+    logo = models.ImageField(name='Logo.jpeg')
+    return render(request, 'listings/description.html', {'logo': logo})

@@ -23,10 +23,11 @@ from listings import views
 
 urlpatterns = ([
                    path('admin/', admin.site.urls),
-                   path('hello/', views.hello),
-                   path('about-us/', views.about),
-                   path('listings/', views.listing),
-                   path('contact-us/', views.contact),
+                    path('description/', views.description),
+                   # path('hello/', views.hello),
+                   # path('about-us/', views.about),
+                   # path('listings/', views.listing),
+                   # path('contact-us/', views.contact),
                    path('', views.home),
                ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
                + static(settings.STATIC_URL, document_root=settings.STATIC_URL))
