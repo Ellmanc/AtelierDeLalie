@@ -1,5 +1,4 @@
 from django.contrib import admin
-from listings.models import *
 
 
 class BandAdmin(admin.ModelAdmin):

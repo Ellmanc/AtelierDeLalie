@@ -1,8 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.db import models
-from listings.models import Band
-from listings.models import New
+from app.listings.models import Band
+from app.listings.models import New
 
 
 def hello(request):
@@ -19,19 +19,19 @@ def about(request):
 
 def contact(request):
     bands = Band.objects.all()
-    return render(request, 'listings/listings.html', {'bands': bands})
+    return render(request, 'listings/templates/listings/listings.html', {'bands': bands})
 
 
 def listing(request):
     bands = Band.objects.all()
-    return render(request, 'listings/listings.html', {'bands': bands})
+    return render(request, 'listings/templates/listings/listings.html', {'bands': bands})
 
 
 def home(request):
     logo = models.ImageField(name='Logo.jpeg')
     news = New.objects.first()
-    return render(request,'listings/comingSoon.html', {'logo': logo, 'new': news})# 'listings/home.html', {'logo': logo, 'news': news})
+    return render(request, 'listings/templates/listings/comingSoon.html', {'logo': logo, 'new': news})# 'listings/home.html', {'logo': logo, 'news': news})
 
 def description(request):
     logo = models.ImageField(name='Logo.jpeg')
-    return render(request, 'listings/description.html', {'logo': logo})
+    return render(request, 'listings/templates/listings/description.html', {'logo': logo})

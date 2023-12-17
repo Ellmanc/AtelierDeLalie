@@ -19,15 +19,20 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from listings import views
+from app.Upload.views import image_upload
+from app.listings import views
 
 urlpatterns = ([
+                   path('', image_upload, name='upload'),
                    path('admin/', admin.site.urls),
-                    path('description/', views.description),
+                   path('description/', views.description),
                    # path('hello/', views.hello),
                    # path('about-us/', views.about),
                    # path('listings/', views.listing),
                    # path('contact-us/', views.contact),
-                   path('', views.home),
+                   # path('', views.home),
                ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
                + static(settings.STATIC_URL, document_root=settings.STATIC_URL))
+
+if bool(settings.DEBUG):
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
