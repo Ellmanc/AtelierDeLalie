@@ -1,0 +1,52 @@
+{% extends 'listings/headband.html' %}
+{#{% load bootstrap5 %}#}
+{% block content %}
+    <div id="NewsCarousel" class="carousel slide carousel-dark" data-ride="carousel">
+        <div class="carousel-indicators" style="background: None">
+            {% for new in news %}
+                {% if forloop.first %}
+                    <button type="button" data-bs-target="#NewsCarousel" data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                {% else %}
+                    <button type="button" data-bs-target="#NewsCarousel"
+                            data-bs-slide-to="{{ new.id|add:-1 }}"
+                            aria-label="Slide {{ new.id }}"></button>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="carousel-inner">
+            {% for new in news %}
+                <div class="carousel-item{% if forloop.counter == 1 %} active{% endif %}">
+                    <div class="News" style="background-image: url({{ new.backImage.url }})">
+                        <img src="{{ new.field_name.url }}" alt="Responsive image" class="img-fluid img-thumbnail">
+                        <div class="NewsText">
+                            <h2>{{ new.title }}</h2>
+                            <p>{{ new.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#NewsCarousel"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#NewsCarousel"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    {#    {% for new in news %}#}
+    {#        <div class="News" style="background-image: url({{ new.backImage.url }})">#}
+    {#            <img src="{{ new.field_name.url }}">#}
+    {#            <div class="NewsText">#}
+    {#                <h2>{{ new.title }}</h2>#}
+    {#                <p>{{ new.content }}</p>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    {% endfor %}#}
+{% endblock %}
