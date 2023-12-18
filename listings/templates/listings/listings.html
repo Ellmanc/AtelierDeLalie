@@ -1,0 +1,11 @@
+{% extends 'listings/headband.html' %}
+{% block content %}
+
+<ul>
+        {% for band in bands %}
+            <h1>{{ band.name }}</h1>
+            <li>{{ band.genre }}</li>
+        {% endfor %}
+</ul>
+
+{% endblock %}
